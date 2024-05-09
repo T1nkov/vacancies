@@ -19,13 +19,14 @@
     gap:10px
   }
 }
-.city{
-    display: flex;
-    
-}
-.city div::before{
-    content: url(./assets/location.png);
+.city p {
+        display: flex;
     align-items: center;
+    gap: 10px;
+}
+.city p::before{
+    content: url(./assets/location.png);
+   
 }
 .descript {
   border: 1px solid #eaebed;

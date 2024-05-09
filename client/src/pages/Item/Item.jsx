@@ -17,20 +17,25 @@ function Item() {
           <p>{result.workday}</p>
         </div>
         <div className={style.city}>
-          
-          <div>{result.city}</div>
+          <p>{result.city}</p>
         </div>
       </div>
 
       <div className={style.descript}>
         <h2>Обязанности</h2>
-        <p>{result.responsibilities}</p>
+        {result.responsibilities.map((el, index) => (
+          <p key={index}>• {el}</p>
+        ))}
 
         <h2>Требования:</h2>
-        <p>{result.requirements}</p>
+        {result.requirements.map((el, index) => (
+          <p key={index}>• {el}</p>
+        ))}
 
         <h2>Условия:</h2>
-        <p>{result.conditions}</p>
+        {result.conditions.map((el, index) => (
+          <p key={index}>• {el}</p>
+        ))}
       </div>
     </div>
   );
